@@ -1,100 +1,112 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>WEB1 - CSS</title>
+    <meta charset="utf-8">
 
-<head>
-  <title>WEB1 - Welcome</title>
-  <meta charset="utf-8">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163571026-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-163571026-2');
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics End -->
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163571026-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <!--CSS시작-->
+    <style>
+      body  {
+        margin: 0px;
+      }
 
-    gtag('config', 'UA-163571026-2');
-  </script>
-  <!-- Global site tag (gtag.js) - Google Analytics End -->
+      a {
+        color:black;
+        text-decoration: none;
+      }
 
-  <!--CSS시작-->
-  <style>
-    a
-    {
-      color:black;
-      text-decoration: none;
-    }
+      h1  {
+        font-size: 45px;
+        text-align: center;
+        border-bottom: 2px solid gray;
+        margin: 0px;
+        padding: 20px;
+      }
 
-    #active
-    {
-      color:red;
-    }
+      #grid ol  {
+        border-right: 2px solid gray;
+        width: 100px;
+        margin: 0px;
+        padding: 25px;
+        padding-left: 33px;
+      }
 
-    .saw
-    {
-      color:purple;
-    }
+      #grid {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+      }
 
-    h1
-    {
-      font-size: 40px;
-      text-align: center;
-    }
+      #grid #article{
+        padding-left: 25px;
+      }
 
-  </style>
-  <!--CSS끝-->
+    </style>
+    <!--CSS끝-->
 
-</head>
-
-
-<body>
-
-<h1><a href="index.html">WEB</h1>
-
-<ol>
-  <li><a href="about_HTML.html" class="saw">HTML</a></li>
-  <li><a href="about_CSS.html" class="saw" id="active">CSS</a></li>
-  <li><a href="about_Javascript.html">Javascript</a></li>
-  <li><a href="video.html">Videos</a></li>
-  <li><a href="image.html">Images</a></li>
-</ol>
-
-<!--이 위까지가 공통된 메뉴 -->
-<!--이 아래부터 페이지 고유의 내용들 -->
-
-<h2>CSS</h2>
-
-<p> CSS 속성을 스스로 알아내는 방법
-  <br>
-</p>
-<p>
-태그 선택자(태그명) < 클래스 선택자(.클래스명) < id(#id명) 선택자 순으로 우선순위가 높음.
-<br>
-id는 한 페이지에서 중복되면 안됨. 유일무이해야 함.
-<br>
-당연히 태그를 가리키는 선택자보다는 id를 가리키는 선택자가 더 구체적임. 그래서 우선순위가 높다고 할 수 있다.
-<br>
-효과와 선택자에 대한 이야기를 끝냈다.
-</p>
+  </head>
 
 
 
 
 
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/5ec35b078ee2956d73a26ee6/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
 
-</body>
+  <body>
+    <h1><a href="index.html">WEB - CSS</a></h1>
 
+    <div id="grid">
+      <ol>
+        <li><a href="about_HTML.html">HTML</a></li>
+        <li><a href="about_CSS.html">CSS</a></li>
+        <li><a href="about_Javascript.html">Javascript</a></li>
+        <li><a href="video.html">Videos</a></li>
+        <li><a href="image.html">Images</a></li>
+      </ol>
+
+    <!--이 위까지가 공통된 메뉴 -->
+    <!--이 아래부터 페이지 고유의 내용들 -->
+
+      <div id="article">
+        <h2>CSS</h2>
+          <p> CSS 속성을 스스로 알아내는 방법
+            <br>
+            태그 선택자(태그명) < 클래스 선택자(.클래스명) < id(#id명) 선택자 순으로 우선순위가 높음.
+            <br>
+            id는 한 페이지에서 중복되면 안됨. 유일무이해야 함.
+            <br>
+            당연히 태그를 가리키는 선택자보다는 id를 가리키는 선택자가 더 구체적임. 그래서 우선순위가 높다고 할 수 있다.
+            <br>
+            효과와 선택자에 대한 이야기를 끝냈다.
+          </p>
+      </div>
+    </div>
+
+
+
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/5ec35b078ee2956d73a26ee6/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+  </body>
 </html>
