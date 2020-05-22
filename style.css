@@ -33,7 +33,13 @@ h1  {
 }
 
 @media(max-width:800px){
-    div{
-        display:none;
-        }
+    #grid {
+        display: block;
+    }
+    #grid ol  {
+      border-right: none;
+    }
+    h1  {
+      border-bottom: none;
+    }
 }
