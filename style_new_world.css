@@ -1,0 +1,11 @@
+
+a {
+  color:orchid;
+  text-decoration: none;
+}
+
+@media(max-width:800px){
+    div{
+        display:none;
+        }
+}
