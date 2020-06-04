@@ -14,27 +14,51 @@ a {
 h1{
     font-size: 45px;
     text-align: center;
-    border-right: 10px solid gray;
-    border-left: 10px solid gray;
-    border-top:10px solid gray;
-    border-bottom: 10px dashed gray;
-    margin: 10px;
+    border: 5px dashed gray;
+    margin: 0px;
     padding: 10px;
 }
 
 div{
-    font-size: 18px;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
 }
 
-#gridtest{
+#grid_in{
     text-align: left;
     display: grid;
-    grid-template-columns: 1fr 3.5fr;
-    padding: 5px;
-    margin: 5px;
+    grid-template-columns: 1fr 3fr;
+    padding: 0px;
+    margin: 0px;
+    border-right: 5px dashed gray;
 }
 
-p{
-    padding: 5px;
-    margin: 5px;
+#grid_in h3{
+    border-bottom: 5px dashed gray;
+    margin: 0px;
+    padding: 20px;
+}
+
+#grid_in p{
+    margin: 0px;
+    padding: 20px;
+    border-left: 5px dashed gray;
+    border-bottom: 5px dashed gray;
+}
+
+#grid_out{
+    display: grid;
+}
+
+#grid_out li{
+    font-size: 20px;
+    padding-left: 0px;
+}
+
+#grid_out ol{
+    border-right: 5px dashed gray;
+    border-left: 5px dashed gray;
+    border-bottom: 5px dashed gray;
+    margin: 0px;
+    padding: 20px;
 }
