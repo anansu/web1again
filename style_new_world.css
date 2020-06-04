@@ -9,3 +9,32 @@ a {
         display:none;
         }
 }
+
+
+h1{
+    font-size: 45px;
+    text-align: center;
+    border-right: 10px solid gray;
+    border-left: 10px solid gray;
+    border-top:10px solid gray;
+    border-bottom: 10px dashed gray;
+    margin: 10px;
+    padding: 10px;
+}
+
+div{
+    font-size: 18px;
+}
+
+#gridtest{
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 3.5fr;
+    padding: 5px;
+    margin: 5px;
+}
+
+p{
+    padding: 5px;
+    margin: 5px;
+}
