@@ -3,12 +3,16 @@
         display: block;
         border: none;
     }
+    #grid_header{
+        display: block;
+        border: none;
+    }
     #grid_body{
         display: block;
         border: none;
     }
     #grid_ol{
-        display: block;
+        display: inline;
         border: none;
     }
     #grid_content{
@@ -16,6 +20,7 @@
         border: none;
     }
 }
+
 
 body{
     margin: 0px;
