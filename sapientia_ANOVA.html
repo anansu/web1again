@@ -37,16 +37,27 @@
             <!--이 아래부터 페이지 고유의 내용들 -->
             <div id="grid_content">
                 <div>
-                    <h3><a href="sapientia_t-test.html">t-test</a></h3>
-                </div>
-                <div>
-                    <h3><a href="sapientia_z-test.html">z-test</a></h3>
-                </div>
-                <div>
-                    <h3><a href="sapientia_ANOVA.html">ANOVA</a></h3>
-                </div>
-                <div>
-                    <h3><a href="sapientia_regression.html">회귀분석</a></h3>
+                    <h3>One-way ANOVA가 필요한 이유</h3>
+                    <p>
+                        One-way ANOVA를 하는 이유?
+                        우리는 이미 t-test로 두 집단의 차이(평균값의 차이)가 우연인지 아닌지를 검정했다.
+                        그런데 만약 그룹이 3개라면?? t-test를 3번하면 어때?
+                        그게 안되는 이유: 1종 오류에 걸린다. H0이 참이었는데(사실 유의하지 않은데) 거짓이라고 나올 때
+                        (=유의하지 않은데, 유의하다고 결과가 나올 때!) 대충 0.05 * 테스트 횟수가 되어버리고 p value가 실질적으로 0.15가 되어버림.
+                        정리하면 t-test를 3번하면 1종 오류에 빠지기 때문에 새로운 방법을 배워야 함.
+                        그게 바로 One-way ANOVA임. One-way는 독립변수가 하나라는 의미이고 ANOVA는 Analysis of Variance의 약자.
+                        한국말로는 분산분석이라고 함.(평균분석이 아니라!!)
+                    </p>
+                    <h3>독립변수, 종속변수, 통제변수</h3>
+                    <p>
+                        독립변수(=Independent Variable)
+                        인과관계에서 독립적인 위치에 있는 것(=원인) 인과관계에서 원인이 되는 변수가 독립변수.
+                        종속변수(=Dependent Variable)
+                        논리적 인과관계에서 종속된, 결과가 되는 변수가 종속변수.
+                        통제변수(=Control Variable)
+                        기본적으로 독립변수와 동일하나 연구/조사의 주된 관심사가 되는 변수가 아닌 경우.
+                    </p>
+
                 </div>
             </div>
         </div>

@@ -1,27 +1,3 @@
-@media(max-width:800px){
-    #grid_total{
-        display: block;
-        border: none;
-    }
-    #grid_header{
-        display: block;
-        border: none;
-    }
-    #grid_body{
-        display: block;
-        border: none;
-    }
-    #grid_ol{
-        display: inline;
-        border: none;
-    }
-    #grid_content{
-        display: block;
-        border: none;
-    }
-}
-
-
 body{
     margin: 0px;
 }
@@ -48,4 +24,32 @@ body{
 
 #grid_content{
     border: 5px solid blue;
+}
+
+#grid_content div{
+    border: 5px solid orchid;
+}
+
+
+@media(max-width:800px){
+    #grid_total{
+        display: block;
+        border: none;
+    }
+    #grid_header{
+        display: block;
+        border: none;
+    }
+    #grid_body{
+        display: block;
+        border: none;
+    }
+    #grid_ol{
+        display: inline;
+        border: none;
+    }
+    #grid_content{
+        display: block;
+        border: none;
+    }
 }

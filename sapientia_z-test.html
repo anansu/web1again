@@ -37,16 +37,20 @@
             <!--이 아래부터 페이지 고유의 내용들 -->
             <div id="grid_content">
                 <div>
-                    <h3><a href="sapientia_t-test.html">t-test</a></h3>
-                </div>
-                <div>
-                    <h3><a href="sapientia_z-test.html">z-test</a></h3>
-                </div>
-                <div>
-                    <h3><a href="sapientia_ANOVA.html">ANOVA</a></h3>
-                </div>
-                <div>
-                    <h3><a href="sapientia_regression.html">회귀분석</a></h3>
+                    <h3>z-test 정리</h3>
+                    <p>
+                        정규분포: 종모양! 평균 중심 좌우대칭! 양쪽 꼬리는 0에 영원히 안 닿음. 정규분포는 "평균"과 "표준편차"만으로 규정됨.
+                        즉 종모양이고 평균중심 좌우대칭이 맞고 양측 꼬리가 0에만 안 닿으면 평균이 몇이든 표준편차가 몇이든 "정규분포"임.
+                        <br>
+                        정규분포 아래의 곡선 = 확률
+                        즉 곡선 아래의 면적을 적분해야 확률을 구하는데 이게 빡세다...
+                        그래서 이 적분을 피하기 위해! 정규분포를 "표준정규분포"로 바꾸는 작업을 해야한다.
+                        <br>
+                        표준정규분포: 평균이 0 표준편차가 1인 정규분포
+                        그러면 그냥 정규분포의 숫자들을 표준정규분포로 만들기 위한 작업을 z-transformation이라고 함.(표준화. standardization)
+                        z-score = (원래 정규분포의) 값 - (원래 정규분포의) 평균 / (원래 정규분포의)표준편차
+                        z 값은 단위로부터 자유롭다!
+                    </p>
                 </div>
             </div>
         </div>
