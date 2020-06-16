@@ -13,38 +13,85 @@
         gtag('config', 'UA-163571026-2');
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics End -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_new_world.css">
 </head>
 
 <body>
-    <h1><a href="index.html">WEB - Javascript</a></h1>
-    <div id="grid">
-    <ol>
-        <li><a href="about_HTML.html">HTML</a></li>
-        <li><a href="about_CSS.html">CSS</a></li>
-        <li><a href="about_Javascript.html">Javascript</a></li>
-        <li><a href="video.html">Videos</a></li>
-        <li><a href="image.html">Images</a></li>
-    </ol>
-    <!--이 위까지가 공통된 메뉴 -->
-    <!--이 아래부터 페이지 고유의 내용들 -->
-        <div id="article">
-            <h2><a href="https://www.w3schools.com/js/" target="_blank" title="javascript specification">Javascript</a>란 무엇인가?</h2>
+    <div id="grid_total">
+        <div id="grid_header">
+            <h1><a href="index.html">WEB</a></h1>
+        </div>
+        <div id="grid_body">
+            <div id="grid_ol">
+                <ol>
+                    <li><a href="about_HTML.html">HTML</a></li>
+                    <li><a href="about_CSS.html">CSS</a></li>
+                    <li><a href="about_Javascript.html">Javascript</a></li>
+                    <li><a href="video.html">Videos</a></li>
+                    <li><a href="image.html">Images</a></li>
+                    <li><a href="sapientia.html">Sapientia</a></li>
+                    <li><a href="python.html">Python</a></li>
+                </ol>
+            </div>
+
+            <!--이 위까지가 공통된 메뉴 -->
+            <!--이 아래부터 페이지 고유의 내용들 -->
+            <div id="grid_content">
+                <div>
+                    <h3><a href="https://www.w3schools.com/js/" target="_blank" title="javascript specification">Javascript</a>란 무엇인가?</h2>
+                    <p>
+                        사용자와 상호작용하는 웹페이지를 만들고 싶다는 욕망.
+                        HTML은 정적임. 수업의 목적은 주간/야간 모드 버튼을 추가하는 것.
+                    </p>
+                    <h3>HTML-Javascript의 만남 1 - Script 태그</h3>
+                        <script>
+                            document.write('hello world');
+                            document.write(1+1);
+                        </script>
+                        <p>
+                            위의 줄은 자바스크립트를 통해 hello world와 1+1을 그려낸 것임.
+                            핵심은 script 태그를 통해 자바스크립트를 HTML내에서 실행한다는 것임.
+                            요런 on~들을 전부 "event"들이라고 한다. 이걸 써서 사용자와 상호작용 하는 것임.
+                        </p>
+                    <h3>HTML-Javascript의 만남 2 - event</h3>
+                    <p>
+                        <input type="button" value="밸류, 하이" onclick="alert('alert를 onclick시 보여준다.')">
+                        <input type="text" onchange="alert('onchange경고')">
+                        <input type="text" onkeydown="alert('onkeydown 경고')">
+                        이렇게 이벤트가 일어났을 때 자바스크립트를 실행시키는 것이 onclick임.
+                        중요한 이벤트로는 "클릭" 혹은 "내용이 변했을 때(on~)"
+                    </p>
+                    <h3>HTML-Javascript의 만남 3 - console</h3>
+                    <p>
+                        파일을 만들지 않더라도 아주 가볍게 코드를 실행해야하는 상황들이 있음.
+                        그 경우 개발자도구의 console을 활용시 편하다.
+                        대표적으로 텍스트 세는 .length 등이 있겠지.
+                        혹은 엄청 많은 사람들 중에 추첨해야하는 경우!
+                        미리 작성해둔 코드들을 콘솔에서 활용할 수도 있다는 것.
+                        미리미리 작성해두면 좋다!
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!--Start of Tawk.to Script-->
+    <!-- 라이브리 시티 설치 코드 -->
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80OTgwNy8yNjI5OA==">
     <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/5ec35b078ee2956d73a26ee6/default';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
-        })();
+        (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+
+        if (typeof LivereTower === 'function') { return; }
+
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+
+        e.parentNode.insertBefore(j, e);
+        })(document, 'script');
     </script>
-    <!--End of Tawk.to Script-->
+    <noscript> 라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
+    </div>
+    <!-- 라이브리 시티 설치 코드 끝 -->
 </body>
 </html>
