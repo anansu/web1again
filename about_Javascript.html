@@ -68,7 +68,38 @@
                         대표적으로 텍스트 세는 .length 등이 있겠지.
                         혹은 엄청 많은 사람들 중에 추첨해야하는 경우!
                         미리 작성해둔 코드들을 콘솔에서 활용할 수도 있다는 것.
-                        미리미리 작성해두면 좋다!
+                        미리미리 쓸만한 알고리즘들을 작성해두면 편할 것이다.
+                    </p>
+                    <h3>Javascript의 데이터타입 - 문자열과 숫자</h3>
+                    <p>
+                        자료형은 총 6개 + object라는 객체가 있음.
+                        문자/숫자/Null/Boolean 등이 있지만 나머지는 일단 신경끄자.
+                        숫자야 어차피 사칙연산임. 문자열을 처리할 때 사용하는 JS의 properties와 methods를
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">링크</a>
+                        에서 확인할 수 있음. 뭐 trim이든 indexof든 touppercase든 웬만한건 다 된다.
+                    </p>
+                    <h3>변수와 대입 연산자</h3>
+                    <p>
+                        대입연산자 '='. 바뀌지 않는 constant에는 대입연산자 넣어봐야 의미없다. 에러만 나올 뿐.
+                        변수는 왜 쓰는가? 이유는 너무 많다.
+                        JS에서 변수를 선언할 때, var 변수명 = 대입하는 값
+                        이걸로 쓰는 습관을 당분간 들이도록
+                    </p>
+                    <h3>웹 브라우저 제어</h3>
+                    <p>
+                        JS를 통해 웹브라우저를 제어해보자. div태그와 span태그를 잘 쓰면 css를 적용할 수 있게 된다.
+                        style태그는 script 태그 처럼 "이 안에 있는 것들이 CSS/JS야"라는 의미를 전달하는 HTML태그임.
+                        선택자에 있어서 .은 클래스, #은 id. id는 식별. class는 그루핑하는 것. 제어할 태그를 선택해보자면 다음과 같다.
+                        <input type="button" value="night" onclick="
+                        document.querySelector('body').style.backgroundColor = 'black';
+                        document.querySelector('body').style.color = 'white';
+                        ">
+                        <input type="button" value="day" onclick="
+                        document.querySelector('body').style.backgroundColor = 'white';
+                        document.querySelector('body').style.color = 'black';
+                        ">
+                        <input type="button" value="">
+                        태그/클래스/아이디를 통해 어떻게 CSS를 HTML에 Javascript로 적용시킬 수 있는가
                     </p>
                 </div>
             </div>
