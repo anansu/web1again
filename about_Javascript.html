@@ -90,15 +90,20 @@
                         JS를 통해 웹브라우저를 제어해보자. div태그와 span태그를 잘 쓰면 css를 적용할 수 있게 된다.
                         style태그는 script 태그 처럼 "이 안에 있는 것들이 CSS/JS야"라는 의미를 전달하는 HTML태그임.
                         선택자에 있어서 .은 클래스, #은 id. id는 식별. class는 그루핑하는 것. 제어할 태그를 선택해보자면 다음과 같다.
-                        <input type="button" value="night" onclick="
-                        document.querySelector('body').style.backgroundColor = 'black';
-                        document.querySelector('body').style.color = 'white';
+                        <input id=night_day type="button" value="night" onclick="
+                        if(document.querySelector('#night_day').value === 'night')
+                        {
+                            document.querySelector('body').style.backgroundColor = 'black';
+                            document.querySelector('body').style.color = 'white';
+                            document.querySelector('#night_day').value = 'day';
+                        }
+                        else
+                        {
+                            document.querySelector('body').style.backgroundColor = 'white';
+                            document.querySelector('body').style.color = 'black';
+                            document.querySelector('#night_day').value = 'night';
+                        }
                         ">
-                        <input type="button" value="day" onclick="
-                        document.querySelector('body').style.backgroundColor = 'white';
-                        document.querySelector('body').style.color = 'black';
-                        ">
-                        <input type="button" value="">
                         태그/클래스/아이디를 통해 어떻게 CSS를 HTML에 Javascript로 적용시킬 수 있는가
                     </p>
                 </div>
