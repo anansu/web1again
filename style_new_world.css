@@ -15,7 +15,7 @@ body{
     display: grid;
     grid-template-columns: 1fr 3fr;
     text-align: left;
-    border: 5px solid pink;
+    border: 5px solid gray;
 }
 
 #grid_ol{

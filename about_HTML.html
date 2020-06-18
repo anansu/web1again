@@ -1,71 +1,100 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>WEB1 - Welcome</title>
-        <meta charset="utf-8">
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163571026-2"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-163571026-2');
-        </script>
-        <!-- Global site tag (gtag.js) - Google Analytics End -->
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <title>WEB1 - HTML</title>
+    <meta charset="utf-8">
 
-    <body>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163571026-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-        <h1><a href="index.html">WEB - Welcome</a></h1>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-163571026-2');
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics End -->
+    <link rel="stylesheet" href="style_new_world.css">
+</head>
 
-        <div id="grid">
-            <ol>
-              <li><a href="about_HTML.html">HTML</a></li>
-              <li><a href="about_CSS.html">CSS</a></li>
-              <li><a href="about_Javascript.html">Javascript</a></li>
-              <li><a href="video.html">Videos</a></li>
-              <li><a href="image.html">Images</a></li>
-            </ol>
+<body>
+    <div id="grid_total">
+        <div id="grid_header">
+            <h1><a href="index.html">WEB</a></h1>
+        </div>
+        <div id="grid_body">
+            <div id="grid_ol">
+                <ol>
+                    <li><a href="about_HTML.html">HTML</a></li>
+                    <li><a href="about_CSS.html">CSS</a></li>
+                    <li><a href="about_Javascript.html">Javascript</a></li>
+                    <li><a href="video.html">Videos</a></li>
+                    <li><a href="image.html">Images</a></li>
+                    <li><a href="sapientia.html">Sapientia</a></li>
+                    <li><a href="python.html">Python</a></li>
+                    <li><a href="dns.html">DNS</a></li>
+                </ol>
+            </div>
 
             <!--이 위까지가 공통된 메뉴 -->
             <!--이 아래부터 페이지 고유의 내용들 -->
-            <div id="article">
-
-                <h2><a href="https://www.w3schools.com/html/" target="_blank" title="html 5 specification">HTML</a>이란 무엇인가?</h2>
-
-                <p>html에서 가장 자주 사용하는 26개 태그만 알아도, 나머지 태그 찾아 쓰는건 일도 아니다.</p>
-
-                <p>
-                    줄바꿈 태그에 대해서 확인해볼까? br태그는 new line을 만드는 줄바꿈 tag이고,
-                    새로운 단락(paragraph)을 만드는 태그는 p태그이다.
-                    <ul>
-                        <li>ul에 종속된 li태그들</li>
-                        <li>심심해서 남겨놓았다</li>
-                        <li>sangjae</li>
-                    </ul>
-                </p>
-                <p>
-                    <strong><span style="font-size:19px;">일반인의 제목</span></strong>
-                    <h3>지식인의 제목</h3>
-                </p>
+            <div id="grid_content">
+                <div>
+                    <h3><a href="https://www.w3schools.com/html/" target="_blank" title="html 5 specification">HTML</a>이란 무엇인가?</h2>
+                    <p>
+                        html에서 가장 자주 사용하는 26개 태그만 알아도, 나머지 태그 찾아 쓰는건 일도 아니다.
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        줄바꿈 태그에 대해서 확인해볼까? br태그는 new line을 만드는 줄바꿈 tag이고,
+                        새로운 단락(paragraph)을 만드는 태그는 p태그이다.
+                    </p>
+                    <p>
+                        <strong><span style="font-size:19px;">일반인의 제목</span></strong>
+                        <h3>지식인의 제목</h3>
+                    </p>
+                </div>
             </div>
         </div>
+    </div>
 
-
-        <!--Start of Tawk.to Script-->
+    <!-- 라이브리 시티 설치 코드 -->
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80OTgwNy8yNjI5OA==">
         <script type="text/javascript">
-            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-            (function(){
-            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-            s1.async=true;
-            s1.src='https://embed.tawk.to/5ec35b078ee2956d73a26ee6/default';
-            s1.charset='UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
-            })();
+            (function(d, s) {
+                var j, e = d.getElementsByTagName(s)[0];
+
+                if (typeof LivereTower === 'function') {
+                    return;
+                }
+
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
         </script>
-        <!--End of Tawk.to Script-->
-    </body>
+        <noscript> 라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
+    </div>
+    <!-- 라이브리 시티 설치 코드 끝 -->
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/5ec35b078ee2956d73a26ee6/default';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+
 </html>

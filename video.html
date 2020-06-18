@@ -1,47 +1,79 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>WEB1 - Videos</title>
+    <title>WEB1 - HTML</title>
     <meta charset="utf-8">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163571026-2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
         gtag('config', 'UA-163571026-2');
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics End -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_new_world.css">
 </head>
 
 <body>
-    <h1><a href="index.html">WEB - Videos</a></h1>
+    <div id="grid_total">
+        <div id="grid_header">
+            <h1><a href="index.html">WEB</a></h1>
+        </div>
+        <div id="grid_body">
+            <div id="grid_ol">
+                <ol>
+                    <li><a href="about_HTML.html">HTML</a></li>
+                    <li><a href="about_CSS.html">CSS</a></li>
+                    <li><a href="about_Javascript.html">Javascript</a></li>
+                    <li><a href="video.html">Videos</a></li>
+                    <li><a href="image.html">Images</a></li>
+                    <li><a href="sapientia.html">Sapientia</a></li>
+                    <li><a href="python.html">Python</a></li>
+                    <li><a href="dns.html">DNS</a></li>
+                </ol>
+            </div>
 
-    <div id="grid">
-    <ol>
-        <li><a href="about_HTML.html">HTML</a></li>
-        <li><a href="about_CSS.html">CSS</a></li>
-        <li><a href="about_Javascript.html">Javascript</a></li>
-        <li><a href="video.html">Videos</a></li>
-        <li><a href="image.html">Images</a></li>
-    </ol>
-    <!--이 위까지가 공통된 메뉴 -->
-    <!--이 아래부터 페이지 고유의 내용들 -->
-        <div id="article">
-            <p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Y0xMbCp8t4s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </p>
-            <p>
-                <video width="400" autoplay>
-                <source src="fighting.mp4" type="video/mp4">
-                </video>
-            </p>
+            <!--이 위까지가 공통된 메뉴 -->
+            <!--이 아래부터 페이지 고유의 내용들 -->
+            <div id="grid_content">
+                <div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Y0xMbCp8t4s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <video width="400" autoplay>
+                    <source src="fighting.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
         </div>
     </div>
 
+    <!-- 라이브리 시티 설치 코드 -->
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80OTgwNy8yNjI5OA==">
+        <script type="text/javascript">
+            (function(d, s) {
+                var j, e = d.getElementsByTagName(s)[0];
 
+                if (typeof LivereTower === 'function') {
+                    return;
+                }
+
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript> 라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
+    </div>
+    <!-- 라이브리 시티 설치 코드 끝 -->
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
         var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -56,4 +88,5 @@
     </script>
     <!--End of Tawk.to Script-->
 </body>
+
 </html>
