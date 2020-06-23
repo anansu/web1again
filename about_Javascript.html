@@ -18,52 +18,14 @@
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics End -->
     <link rel="stylesheet" href="style_new_world.css">
-
-    <script>
-        function LinksSetColor(color)
-        {
-            var alist = document.querySelectorAll('a');
-            var i = 0;
-            while(i < alist.length)
-                  {
-                    alist[i].style.color = color;
-                    i=i+1;
-                  }
-        }
-
-        function BodySetColor(color)
-        {
-            document.querySelector('body').style.color = color;
-        }
-
-        function BodySetBackgroundColor(color) {
-            document.querySelector('body').style.backgroundColor = color;
-        }
-
-        function nightDayHandler(self)
-        {
-            if(self.value === 'night')
-            {
-                BodySetBackgroundColor('black');
-                BodySetColor('white');
-                self.value = 'day';
-                LinksSetColor('powderblue');
-            }
-            else
-            {
-                BodySetBackgroundColor('white');
-                BodySetColor('black');
-                self.value = 'night';
-                LinksSetColor('blue');
-            }
-        }
-    </script>
+    <script src="colors.js"></script>
 </head>
 
 <body>
     <div id="grid_total">
         <div id="grid_header">
             <h1><a href="index.html">WEB</a></h1>
+
         </div>
         <div id="grid_body">
             <div id="grid_ol">
@@ -77,6 +39,9 @@
                     <li><a href="python.html">Python</a></li>
                     <li><a href="dns.html">DNS</a></li>
                 </ol>
+                <input id=night_day type="button" value="night" onclick="
+                nightDayHandler(this);
+                ">
             </div>
 
             <!--이 위까지가 공통된 메뉴 -->
@@ -148,9 +113,6 @@
                         style태그는 script 태그 처럼 "이 안에 있는 것들이 CSS/JS야"라는 의미를 전달하는 HTML태그임.
                         선택자에 있어서 .은 클래스, #은 id. id는 식별. class는 그루핑하는 것. 제어할 태그를 선택해보자면 다음과 같다.
                         조건문은 쉬우니까 패스한다.
-                        <input id=night_day type="button" value="night" onclick="
-                        nightDayHandler(this);
-                        ">
                     </p>
                 </div>
                 <div>
@@ -207,11 +169,60 @@
                     </p>
                 </div>
                 <div>
-                    <h3>객체</h3>
+                    <h3>객체 1</h3>
                     <p>
                         객체의 특성 및 존재이유 및 기능 딱 하나에만 집중해보자.
                         서로 연관된 함수와 서로 연관된 변수들을 그룹지어서 정리하기 위한 수납상자를 객체로 생각하면 됨.
                         객체를 폴더로 봐도 무관할 것임. 객체에 속해있는 함수는 "메소드"라고 함.
+                        정보의 양이 많아졌을 때 쓰던 개념이 배열(순서대로 정보 정리)
+                        순서 없이 정보를 저장하는게 객체! 이름이 있는 정리정돈 상자다 이말이야.
+                        var coworkers = {};
+                        이런 식으로 객체를 만든다(으잉)
+                        아래는 testObject라는 객체를 만들어서 이것저것 넣었다 뺐다 해보는 스크립트임.
+                        <br>
+                        <script>
+                            var testObject = {
+                                "programmer": "LeeSangJae",
+                                "cute": "ggulbbang"
+                            };
+                            document.write(testObject.programmer+'<br>');
+                            document.write(testObject.cute+'<br>');
+                            testObject.bookkeeper = "booker";
+                            document.write(testObject.bookkeeper+'<br>');
+                        </script>
+                    </p>
+                </div>
+                <div>
+                    <h3>객체 2 - 반복</h3>
+                    <script>
+                        for (var key in testObject)
+                        {
+                            document.write(key+':'+testObject[key]+'<br>')
+                        }
+                    </script>
+                </div>
+                <div>
+                    <h3>객체 3 - 프로퍼티와 메소드</h3>
+                    <script>
+                        testObject.showAll = function()
+                        {
+                            for (var key in this)
+                            {
+                                document.write(key+':'+this[key]+'<br>');
+                            }
+                        }
+                        testObject.showAll();
+                    </script>
+                    <p>
+                        객체에 소속된 함수를 메소드.
+                        객체 소속된 변수 등을 프로퍼티라고 합니다.
+                    </p>
+                </div>
+                <div>
+                    <h3>파일로 쪼개서 정리정돈하기</h3>
+                    <p>
+                        코드를 정리하는 도구로 함수, 함수를 정리하는 도구로 객체, 객체를 정리하는 도구는?
+                        파일로 정리할 수 있다. 가장 큰 정리정돈 도구가 파일이다 이말이야.
                     </p>
                 </div>
             </div>
