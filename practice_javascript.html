@@ -18,6 +18,7 @@
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics End -->
     <link rel="stylesheet" href="style_new_world.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="colors.js"></script>
 </head>
 
@@ -71,6 +72,26 @@
                         document.write(testObject.name+'<br>');
                         document.write(testObject.price+'<br>');
                         document.write(testObject.ISBN+'<br>');
+                    </script>
+                </div>
+                <div>
+                    2. 다음 표의 객체를 생성할 수 있는 생성자 함수를 만드시오(생성자 함수 이름은 Product, 키 이름과 자료형은 적절하다고 생각하는 것으로 사용합니다).
+                    <br>
+                    이름: 돼지삼겹살
+                    <br>
+                    무게: 100g
+                    <br>
+                    가격: 1690원
+                    <script>
+                        var Product = {
+                            'name': '돼지삼겹살',
+                            'weight' : 100,
+                            'price' : 1690,
+                            calculate:function (weight){
+                                document.write('<br>'+weight*2+'<br>');
+                            }
+                        };
+                        Product.calculate(200);
                     </script>
                 </div>
             </div>
