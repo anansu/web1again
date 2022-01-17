@@ -96,6 +96,127 @@
                         Product.calculate(200);
                     </script>
                 </div>
+                <div>
+                    <h2>Modern Javascript Tutorial</h2>
+                    <p>'자바스크립트'라는 메시지를 담은 alert 창을 띄워줄 것</p>
+                    <script>
+                        let value = true;
+                        alert(typeof value);
+                        value = String(value);
+                        alert(typeof value);
+                    </script>
+
+                    <script>
+                        // for (let i = 1; i < 11; i+= 1)
+                        // {
+                        //     if (i % 2 !== 0) continue 
+                            
+                        //     alert(i);
+                        // }
+                        // for (let i = 1; i < 11; i+= 1)
+                        // {
+                        //     if (i % 2 === 0)
+                        //         alert(i);
+                        // }
+                        // for (let i = 0; i < 3; i++) {
+                        //     alert( `number ${i}!` );
+                        // }
+                        // let i = 0;
+                        // while (i < 3) {
+                        //     alert( `number ${i}!` );
+                        //     i+= 1;
+                        // }
+                        // let result = prompt("100보다 큰 숫자를 입력하세요", "입력한 숫자가 100보다 낮으면 무한 반복됩니다.(취소 버튼 누르거나 확인버튼 가능)");
+                        
+                        // while (Number(result) <= 100) {
+                        //     result = prompt("100보다 큰 숫자를 입력하세요", "입력한 숫자가 100보다 낮으면 무한 반복됩니다.(취소 버튼 누르거나 확인버튼 가능)");
+                        // }
+                        let n = Number(prompt("숫자만 입력해봐","숫자만 입력해"));
+                        
+                        function checkPrime(number) {
+                            let i = 2;
+                            let isPrime = true;
+                            while (number > i) {
+                                if ((number % i) == 0) {
+                                alert(`소수 아님, i가 ${i}일 때 아니라고 판정남`);
+                                isPrime = false;
+                                break;
+                                }
+                                i+=1;
+                            }                            
+                            alert(`최종 i의 값은 ${i}입니다.`);
+                            return alert(isPrime);
+                        }
+                        
+                        checkPrime(n);
+                        
+                    </script>
+                    <!-- <script>
+                        let sum = 0;
+
+                        while (true) {
+
+                        let value = +prompt("숫자를 입력하세요.", '');
+
+                        if (!value) break; // (*)
+
+                        sum += value;
+
+                        }
+                        alert( '합계: ' + sum );                        
+                    </script> -->
+                    <!-- "10"
+                    -1
+                    1
+                    2
+                    6
+                    45px -> 9px
+                    $45
+                    2
+                    NAN - 2 -> NAN
+                    Infinity
+                    "   -9   5"
+                    -14
+                    1
+                    NAN + 1 -> NAN
+                    NAN - 2 -> -2 -->
+                    <!-- <script>
+                        let current_user_name = prompt("이름이 뭐에요?", "이름을 입력해주세요!");
+                        alert(current_user_name);
+                        document.write(current_user_name);
+                        let isBoss = confirm("당신이 당신 삶의 주인인가요?");
+                        alert(isBoss);
+                        if(isBoss) {
+                            document.write("당신 삶의 주인이 맞군요");
+                        }
+                        else {
+                            document.write("주인이 아니구만");
+                        }
+                    </script> -->
+                    <!-- <script src="alert.js"></script>
+                    <script>alert('자바스크립트!')</script>
+
+                    <script>
+                        let admin;
+                        let name = 1234;    // 자료의 타입이 있어도 언제든지 바꿀 수 있는 언어를 '동적 타입' 언어라고 한다.
+                        name = "John";
+                        admin = name;
+                        alert(admin+`아나${1+2}콘다`);
+                        let our_planet = "the_earth";
+                        let current_user_name;
+                        prompt("사용자에게 보여줄 문자열(필수)", "입력 필드의 초기값(선택)");
+                        confirm("질문(필수)");
+                        console.log((undefined));
+                        console.log(typeof(0));
+                        console.log(typeof(10n));
+                        console.log(typeof(true));
+                        console.log(typeof("Foo"));
+                        console.log(typeof(Symbol("id")));
+                        console.log(typeof(Math));
+                        console.log(typeof(null));
+                        console.log(typeof(alert));
+                    </script> -->
+                </div>
             </div>
         </div>
     </div>
