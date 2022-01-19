@@ -99,14 +99,16 @@
                 <div>
                     <h2>Modern Javascript Tutorial</h2>
                     <p>'자바스크립트'라는 메시지를 담은 alert 창을 띄워줄 것</p>
-                    <script>
+                    <!-- <script>
                         let value = true;
                         alert(typeof value);
                         value = String(value);
                         alert(typeof value);
-                    </script>
+                    </script> -->
 
-                    <script>
+
+
+                    <!-- <script>
                         // for (let i = 1; i < 11; i+= 1)
                         // {
                         //     if (i % 2 !== 0) continue 
@@ -131,26 +133,28 @@
                         // while (Number(result) <= 100) {
                         //     result = prompt("100보다 큰 숫자를 입력하세요", "입력한 숫자가 100보다 낮으면 무한 반복됩니다.(취소 버튼 누르거나 확인버튼 가능)");
                         // }
-                        let n = Number(prompt("숫자만 입력해봐","숫자만 입력해"));
+                        // let n = Number(prompt("숫자만 입력해봐","숫자만 입력해"));
                         
-                        function checkPrime(number) {
-                            let i = 2;
-                            let isPrime = true;
-                            while (number > i) {
-                                if ((number % i) == 0) {
-                                alert(`소수 아님, i가 ${i}일 때 아니라고 판정남`);
-                                isPrime = false;
-                                break;
-                                }
-                                i+=1;
-                            }                            
-                            alert(`최종 i의 값은 ${i}입니다.`);
-                            return alert(isPrime);
-                        }
+                        // function checkPrime(number) {
+                        //     let i = 2;
+                        //     let isPrime = true;
+                        //     while (number > i) {
+                        //         if ((number % i) == 0) {
+                        //         alert(`소수 아님, i가 ${i}일 때 아니라고 판정남`);
+                        //         isPrime = false;
+                        //         break;
+                        //         }
+                        //         i+=1;
+                        //     }
+                        //     if (isPrime === true) {
+                        //         alert(`소수 맞음, i가 ${i}일 때 맞다고 판정남`);
+                        //     }        
+                        //     return alert(isPrime);
+                        // }
                         
-                        checkPrime(n);
+                        // checkPrime(n);
                         
-                    </script>
+                    </script> -->
                     <!-- <script>
                         let sum = 0;
 
@@ -216,6 +220,84 @@
                         console.log(typeof(null));
                         console.log(typeof(alert));
                     </script> -->
+
+                    <!-- <script>
+                        let browser;
+                        if (browser === 'Edge') {
+                            alert('Edge');
+                        }
+                        else if (browser === ("Chrome"||"Firefox"||"Safari"||"Opera")) {
+                            alert('지원하는 브라우저');
+                        }
+                        else {
+                            alert('현재 페이지가 괜찮길...');
+                        }
+                    </script> -->
+
+                    <!-- <script>
+                        let a = Number(prompt('a?','입력해봐'));
+
+                        switch(a) {
+                            case 0:
+                                alert(0);
+                                break;
+                            case 1:
+                                alert(1);
+                                break;
+                            case 2:
+                            case 3:
+                                alert("2,3");
+                                break;
+                        }
+                    </script>-->
+                    <!-- <script>
+                        // function checkAge(age) {
+                        //     return (age > 18) ? true : confirm('보호자의 동의를 받으셨나요?');
+                        // }
+
+                        // checkAge(11);
+
+                        // function checkAge(age) {
+                        //     return (age > 18) || confirm('보호자의 동의를 받으셨나요?');
+                        // }
+
+                    </script> -->
+                    <!-- <script>
+                        function min(num1, num2) {
+                            return (num1 >= num2) ? num2 : num1
+                        }
+
+                        alert(min(7, 1));
+                    </script> -->
+
+                    <!-- <script>
+                        function pow(base, power) {
+                            let result = 1;
+                            for (let i=1; power>=i; i+=1) {
+                                result = result * base;
+                            }
+                            return result;
+                        }
+
+                        let user_input_base = prompt("base의 값을 입력하세요.", "1,2,3...");
+                        let user_input_power = prompt("power의 값을 입력하세요.", "1,2,3...");
+                        while ((user_input_power % 1 !== 0) || user_input_power <= 0) {
+                            user_input_power = prompt("power의 값은 자연수만 가능합니다.", "1,2,3...");
+                        }
+
+                        alert(pow(user_input_base, user_input_power));
+
+                    </script> -->
+
+                    <script>
+                        let ask = (question, yes, no) => confirm(question) ? yes() : no()
+                        ask (
+                                "동의하십니까?",
+                                () => alert("동의하셨습니다."),
+                                () => alert("취소 버튼을 누르셨습니다.")
+                            );
+                        </script>
+
                 </div>
             </div>
         </div>
