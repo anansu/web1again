@@ -1,24 +1,67 @@
 "use strict"
 
 
-let user1 = {
-    "name": "보라",
-    admin() {
-        alert("관리자 계정");
-    },
-}
 
-let user2 = {
-    "age": 16,
-}
+let billion = 1e9;
+let ms = 1e-6;
+let num = 255;
 
-// user1.admin?.();
-// user2.admin?.();
+alert(num.toString(16));
+alert(num.toString(4));
 
-let key = "name";
 
-alert(user1?.[key]);
-alert(user2?.[key]);
+// let welcome = "Hello";
+
+// alert ( welcome.toUpperCase() );
+
+// welcome.test = 5;
+
+// alert(welcome.test); // 엄격모드에선 error임. wrapper 객체를 수정하려고 할 때 에러가 발생.
+// 애초에 래퍼 객체는 메서드 부르고 즉시 삭제되기 때문에...
+
+
+// let user = {
+//     "name": "John",
+//     "money": 1000,
+//     [Symbol.toPrimitive](hint) {
+//         alert(`hint: ${hint}`);
+//         return hint == "string" ? `{name: "${this.name}"}` : this.money;
+//     }
+// }
+
+// const id1 = Symbol.for("id");
+// const id2 = Symbol.for("id");
+// alert(Symbol.keyFor(id1));
+
+
+// alert(id1 === id2);
+
+// let sangjae = Symbol(1);
+// let ggbb = Symbol(1);
+
+// let id1 = Symbol("id");
+// let id2 = Symbol("id");
+
+// alert(id1 == id2); // false
+
+// let user1 = {
+//     "name": "보라",
+//     admin() {
+//         alert("관리자 계정");
+//     },
+// }
+
+// let user2 = {
+//     "age": 16,
+// }
+
+// // user1.admin?.();
+// // user2.admin?.();
+
+// let key = "name";
+
+// alert(user1?.[key]);
+// alert(user2?.[key]);
 
 
 // function Accumulator(startingValue) {
