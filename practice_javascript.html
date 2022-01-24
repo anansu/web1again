@@ -289,14 +289,33 @@
 
                     </script> -->
 
-                    <script>
+                    <!-- <script>
                         let ask = (question, yes, no) => confirm(question) ? yes() : no()
                         ask (
                                 "동의하십니까?",
                                 () => alert("동의하셨습니다."),
                                 () => alert("취소 버튼을 누르셨습니다.")
                             );
-                        </script>
+                    </script> -->
+                    <!-- <script>
+                        let user = {
+                            name: "John",
+                            age: 30,
+                        }
+
+                        user.isAdmin = true;
+                        prompt("user의 age에 해당", user["age"])
+                        let key = prompt("사용자의 어떤 정보를 얻고 싶음?","name");
+                        confirm(user[key]);
+                        let fruit = prompt("프로퍼티 이름을 뭘로 할래?","apple");
+                        user[fruit] = 5;
+                        alert(user.apple);          
+                        for (let key in user) {
+                            alert ("user 객체의 순서대로 제시되는 Property의 Key는 : "+key);
+                            alert ("user 객체의 "+key+" key에 해당하는 Propoerty의 Value는 : "+user[key]);
+                        }
+                    </script> -->
+                    <script src="./object_practice.js"></script>
 
                 </div>
             </div>
