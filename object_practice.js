@@ -2,14 +2,32 @@
 
 
 
+// function truncate(str, maxlength) {
+//     if (String(str).length <= Number(maxlength)) return String(str)
+//     return String(str).slice(0 , maxlength - 1) + "…"
+// }
+
+// function checkSpam(str) {
+//     let result = String(str).toLowerCase();
+//     return (result.includes("viagra") || result.includes("xxx"))
+// }
+
+// alert(checkSpam("ViAgrA"));
+// alert(checkSpam("xxxxxx"));
+// alert(checkSpam("inddd"));
+
+// function ucFirst(str) {
+//     return String(str).slice(0,1).toUpperCase() + String(str).slice(1);
+// }
 
 
 
+// alert( '𝒳'[0] ); // 이상한 기호가 출력됨
+// alert( '𝒳'[1] );
 
-function randomInteger(min, max) {
-    return Math.round((min + Math.random() * (max - min)))
-}
-
+// function randomInteger(min, max) {
+//     return Math.round((min - 0.5 + Math.random() * (max - min + 1)))
+// }
 
 // function random(min, max) {
 //     return min + (Math.random() * (max - min))
