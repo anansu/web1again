@@ -2,12 +2,95 @@
 
 
 
-let billion = 1e9;
-let ms = 1e-6;
-let num = 255;
 
-alert(num.toString(16));
-alert(num.toString(4));
+
+
+
+function randomInteger(min, max) {
+    return Math.round((min + Math.random() * (max - min)))
+}
+
+
+// function random(min, max) {
+//     return min + (Math.random() * (max - min))
+// }
+
+
+
+
+
+// function readNumber() {
+//     let result = prompt("숫자 입력할 때까지 물어볼거다", "");
+//     if (result === null) {
+//         alert(null);
+//         return null
+//     } else if (result === "") {
+//         alert(null);
+//         return null
+//     } else { 
+//         while (isNaN(result)) {
+//             result = prompt("숫자 입력할 때까지 물어볼거다", "");
+//         }
+//         alert(result);
+//         return Number(result);
+//     }
+// }
+// if 안에 반복문을 넣는 것은 정말 좋지 않다. 안 넣는 방법을 최대한 찾아볼 것.
+// if / switch 한 다음에 반복문 돌릴 수 있는건 나쁘지 않음(지금 내 방법 그렇게 나쁘진 않다)
+// 다만 반복문 안에 조건문 넣는거는 매번 반복할 때마다 체크해야하니까 진짜 구린 방법이 맞다.
+// 기왕이면 스위치문 쓰는게 enum으로 컴파일러가 변환하기 좋아서 좋다.
+// 소수점 계산에서는 정확한 equlity 비교를 피하는게 좋다. 0.2 + 0.2 === 0.4가 false다.
+
+
+
+
+// function readNumber() {
+//     let result;
+//     do {
+//         result = prompt("숫자 입력할 때까지 물어볼거다", "");
+//     } while (!isFinite(result))
+
+//     switch(result) {
+//         case null:
+//         case '':
+//             return null
+//         default:
+//             return Number(result)
+//     }
+// }
+
+
+// readNumber();
+
+
+// (1) 아무 입력도 안 하면, ""이 들어옴. 이건 숫자로 변환시 0이 됨.
+// (2) 취소를 누르면, null이 들어옴. 이건 숫자로 변환시 0이 됨.
+// 즉, 둘다 isNaN시에 False가 떨어지고, isFinite시에 True가 떨어짐.
+// if (result = null) -> return null
+// if (reuslt = "") -> return null
+// while (isNaN(result)) { prompt}
+
+
+// alert ( Math.round(6.35 * 10) / 10);
+
+
+
+// let num1 = Number(prompt("첫 번째 숫자를 입력해주세요.","3"));
+// let num2 = Number(prompt("두 번째 숫자를 입력해주세요.","4"));
+
+// alert(num1+num2);
+
+
+
+
+// let billion = 1e9;
+// let ms = 1e-6;
+// let num = 255;
+
+// alert(num.toString(16));
+// alert(num.toString(4));
+
+// Object.is(1,1);
 
 
 // let welcome = "Hello";
