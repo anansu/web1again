@@ -2,6 +2,159 @@
 
 
 
+
+
+
+// function getMaxSubSum(arr) {
+//     let max_sum = 0;
+//     let partial_sum = 0;
+
+//     for (let i of arr) {
+//         partial_sum += i;        
+//         max_sum = Math.max(partial_sum, max_sum);
+//         partial_sum = Math.max(0, partial_sum);
+//     }
+//     return max_sum
+// }
+
+
+// function getMaxSubSum(arr) {
+//     let sum = 0;
+//     for (let i = 0; i < arr.length; i += 1) {
+//         let subsum = 0;
+//         for (let j = i; j < arr.length; j += 1) {
+//             subsum += arr[j];
+//             sum = Math.max(sum, subsum);
+//         }
+//     }
+//     return sum;
+// }
+
+
+
+
+/*
+부분배열의 최대합을 찾기
+
+(1) Brute Force
+(2) Divide-and-Conquer
+(3) Scanning(=Kadane's Algorithm)
+
+
+[1,-2,3,-4,5,-5,6,-7]
+(1) 그냥 모든 부분배열을 찾아서 그 배열의 합이 가장 큰 것을 구한다.
+1 / 1,-2 / 1,-2,3 / 1,-2,3,-4 ...
+이렇게 쭉 찾아서 이 합들 중에서 가장 큰 것을 찾는다.
+-2 / -2,3 / -2~-4 / -2~5 ...
+마찬가지로 이렇게 쭉 찾아서 이 합들 중에서 가장 큰 것을 찾는다.
+3 / 3,-4 / 3~5 ...
+
+
+최대합을 갖는 부분배열을 출력하는 문제
+최대합을 갖는 부분배열의 개수를 출력하는 문제
+최대합을 갖는 부분배열의 시작 index와 끝 index를 구하는 문제
+*/
+
+
+
+
+
+
+
+
+
+
+
+// function sumInput() {
+//     let arr = [];
+//     let sum = 0;
+//     let user_input;
+
+//     user_input = prompt("숫자를 입력하세요", "3");
+
+//     while (!(user_input === "" || user_input === null || !isFinite(user_input))) {
+//         arr.push(Number(user_input));
+//         user_input = prompt("숫자를 입력하세요", "3");
+//     }
+
+
+//     for (let i of arr) {
+//             sum += i;
+//         }
+//     alert(`result의 결과는 ${sum}이고, arr은 ${arr}이다.`);
+//     return sum;
+// }
+
+// sumInput();
+
+
+// let styles = ["Jazz", "Blues"];
+// styles.push("Rock-n-Roll");
+// let styles2 = ["Jazz", "Blues","Rock-n-Roll", "Balad"];
+
+// function insertClassics(arr) {
+//     console.log(arr);
+//     let center = Math.floor(arr.length / 2);
+//     let rest = [];
+//     if (arr.length % 2 === 0) {
+        
+//         for (let i = arr.length ; i > center ; i -= 1) {
+//             let element = arr.pop();
+//             rest.push(element);
+//         }
+//         arr[center] = "Classics"
+//         for (let i = rest.length; i > 0; i -= 1) {
+//             let element2 = rest.pop()
+//             arr.push(element2);
+//         }
+        
+//         arr.shift();
+//         arr.unshift("Reggae");
+//         arr.unshift("Rap");
+        
+//         return arr
+//     }
+//     else {
+//         arr[center] = "Classics"
+        
+//         arr.shift();
+//         arr.unshift("Reggae");
+//         arr.unshift("Rap");
+        
+//         return arr
+//     }
+// }
+
+// insertClassics(styles);
+
+// insertClassics(styles2);
+
+
+// 정중앙이 뭐지? 홀수 기준으로는 뒤에서 세었을 때랑 앞에서 세었을 때랑 동일한 위치에 있는 것
+
+// 짝수 기준으로 정중앙은? 그냥 비어있다고 생각하고 추가하자.
+// 만약 length % 2 === 0 이면, 뒤에꺼 다 자르고 어디에 저장하고나나서 Classics를 추가하고
+
+
+
+// 1. 배열 정중앙에 있는 요소를 찾기
+// 2. 그걸 바꾸기
+
+
+
+// let fruits = ["사과", "배", "오렌지"]
+
+// let shoppingCart = fruits;
+// shoppingCart.push("바나나");
+
+// alert(fruits.length); // 아마도 4가 나오겠지. 객체이고, 같은 배열에 대한 참조니까..?
+
+
+// function extractCurrencyValue(str) {
+//     return Number(String(str).slice(1));
+// }
+
+
 // function truncate(str, maxlength) {
 //     if (String(str).length <= Number(maxlength)) return String(str)
 //     return String(str).slice(0 , maxlength - 1) + "…"
