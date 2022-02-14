@@ -1,7 +1,75 @@
 "use strict"
 
 
+let lengths = ["Bilbo", "Gandalf", "Nazgul"].map((item) => item.length);
+alert(lengths);
 
+
+
+
+// let users = [
+//     {id: 1, name: "John"},
+//     {id: 2, name: "Pete"},
+//     {id: 3, name: "Mary"}
+// ];
+  
+//   // 앞쪽 사용자 두 명을 반환합니다.
+// let someUsers = users.filter(item => item.id < 3);
+  
+// alert(someUsers.length); // 2
+
+
+// let users = [
+//     {id: 1, name:"John"},
+//     {id: 2, name: "Pete"},
+//     {id: 3, name: "Mary"},
+// ];
+
+// let result = users.findIndex((item, index) => (item.id === 3) && (index === 1));
+
+// alert(result);
+
+
+// const arr = [NaN];
+// alert( arr.indexOf(NaN) ); // -1 (완전 항등 비교 === 는 NaN엔 동작하지 않으므로 0이 출력되지 않습니다.)
+// alert( arr.includes(NaN) );// true (NaN의 여부를 확인하였습니다.)
+
+
+// let arr = [1,0,false];
+
+// alert(arr.indexOf(0,2));
+// alert(arr.indexOf(false,2));
+// alert(arr.indexOf(null));
+
+// let a = ["Bilbo", "Gandalf", "Nazgul"];
+
+// a.forEach(alert);
+// a.forEach((item, index, array) => {
+//     alert(`${item} is at index ${index} in ${array}`);
+// });
+
+
+// let arr = [1,2];
+
+// alert (arr.concat([3,4]));
+
+
+// let arr = ["t","e","s","t"];
+
+// alert(arr.slice(1,3));
+// alert(arr.slice(0));
+
+
+// let arr = ["I","go","home"];
+
+// arr.splice(1, 0, "and","you");
+
+
+// alert(arr[0]);
+
+// alert(arr.length);
+
+// alert(arr);
 
 
 
