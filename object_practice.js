@@ -1,10 +1,104 @@
 "use strict"
 
 
-let lengths = ["Bilbo", "Gandalf", "Nazgul"].map((item) => item.length);
-alert(lengths);
 
 
+function capitalizeFirstLetter(word) {
+    return String(word).slice(0,1).toUpperCase() + String(word).slice(1);
+}
+
+function camelize(word_split_by_dash) {
+    let splitted_word_array = String(word_split_by_dash).split("-");
+    splitted_word_array = splitted_word_array.map(word => capitalizeFirstLetter(word));
+    let result = splitted_word_array.join("");
+    return result.slice(0,1).toLowerCase() + result.slice(1)
+}
+
+
+alert(camelize("background-color"));
+alert(camelize("list-style-image"));
+alert(camelize("-webkit-transition"));
+
+
+
+// let army = {
+//     minAge: 18,
+//     maxAge: 27,
+//     canJoin(user) {
+//         return ((user.age >= this.minAge) && (user.age < this.maxAge));
+//     },
+// }
+
+// let users = [
+//     {age: 16},
+//     {age: 20},
+//     {age: 23},
+//     {age: 30},
+// ]
+
+// let soldiers = users.filter(army.canJoin, army);
+
+// alert(soldiers);
+// alert(soldiers.length);
+// alert(soldiers[0]["age"]);
+// alert(soldiers[0].age);
+// alert(soldiers[1]["age"]);
+// alert(soldiers[1].age);
+
+
+// let arr = [1, 2, 3, 4, 5];
+
+// let result = arr.reduce((sum, current) => sum + current, 0);
+// arr.reduce((sum, current, index, arr) => sum+current,0)
+
+// alert(result); // 15
+
+
+
+// let names = "Bilbo, Gandalf, Nazgul";
+
+// let arr = names.split(", ");
+
+// for (let name of arr) {
+//     alert(`${name}에게 보내는 편지`);
+// }
+
+
+
+// let arr = [1,15,2,22]
+
+// arr.reverse();
+
+// alert(arr);
+
+
+// let countries = ['Österreich', 'Andorra', 'Vietnam'];
+
+// alert( countries.sort( (a, b) => a > b ? 1 : -1) ); // Andorra, Vietnam, Österreich (제대로 정렬이 되지 않았습니다.)
+// alert( countries.sort( (a, b) => a.localeCompare(b) ) ); // Andorra,Österreich,Vietnam (제대로 정렬되었네요!)
+
+
+
+// function compareNumeric(a, b) {
+//     if (a > b) return 1;
+//     if (a == b) return 0;
+//     if (a < b) return -1;
+//   }
+
+//   let arr = [ 1, 2, 15 ];
+
+//   arr.sort(compareNumeric);
+  
+//   alert(arr);  // 1, 2, 15
+
+//   [1, -2, 15, 2, 0, 8].sort(function(a, b) {
+//     alert( a + " <> " + b );
+//     return a - b;
+//   });
+
+
+// let lengths = ["Bilbo", "Gandalf", "Nazgul"].map((item) => item.length);
+// alert(lengths);
 
 
 // let users = [
