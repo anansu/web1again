@@ -3,21 +3,100 @@
 
 
 
-function capitalizeFirstLetter(word) {
-    return String(word).slice(0,1).toUpperCase() + String(word).slice(1);
+function Calculator() {
+    this.methods = {
+        "+": function(a,b) {return a + b},
+        "-": function(a,b) {return a - b},
+    }
+
+    this.calculate = function(str) {
+        let piece = str.split(" ");
+        if (
+            (isFinite(piece[0]) === false) ||
+            (isFinite(piece[2]) === false) ||
+            ((piece[1] in this.methods) === false)
+        ) {return alert("형식에 맞게 입력해주세요.\n형식: '숫자 연산자 숫자'")}       
+        return this.method[piece[1]](Number(piece[0]),Number(piece[2]))
+    }
+
+    this.addMethod = function(name, func) {
+        this.methods[name] = func;
+    }
 }
 
-function camelize(word_split_by_dash) {
-    let splitted_word_array = String(word_split_by_dash).split("-");
-    splitted_word_array = splitted_word_array.map(word => capitalizeFirstLetter(word));
-    let result = splitted_word_array.join("");
-    return result.slice(0,1).toLowerCase() + result.slice(1)
-}
 
 
-alert(camelize("background-color"));
-alert(camelize("list-style-image"));
-alert(camelize("-webkit-transition"));
+
+
+
+// function Calculator() {
+
+//     let operator = ["+","-"];
+
+//     this.calculate = function(str) {
+//         let piece = str.split(" ");
+//         if (!(isFinite(piece[0]) && isFinite(piece[2]))) {
+//             return alert("문자열의 맨 앞과 맨 뒤에는 숫자만 입력해주세요.")
+//         }
+//         piece[0] = Number(piece[0]);
+//         piece[2] = Number(piece[2]);
+//         return piece[0] operator piece[2]
+//     }
+//     this.addMethod = function(name, func) {
+        
+//     }
+// }
+
+
+
+
+
+
+
+// function copySorted(arr) {
+//     let result = [].concat(arr);
+//     result.sort();
+//     return result
+// }
+
+// let arr = ["HTML", "JavaScript", "CSS"];
+
+// let sorted = copySorted(arr);
+
+// alert( sorted ); // CSS, HTML, JavaScript
+// alert( arr ); // HTML, JavaScript, CSS (no changes)
+
+
+
+
+
+// let arr = [5,2,1,-10,8];
+
+// arr.sort((a,b) => {
+//     return b - a
+// });
+
+// alert(arr); // 8, 5, 2, 1, -10
+
+
+// function filterRangeInPlace(arr, min, max) {
+//     for (let i = 0 ; i < arr.length ; i += 1) {
+//         if (!((min <= arr[i]) && (arr[i] <= max))) {
+//             arr.splice(i,1);
+//             i -= 1;
+//         }
+//     }
+// }
+
+
+// function filterRangeInPlace(arr, min, max) {
+//     arr.map((item, index, array) => {
+//         (min <= item) && (item <= max) ? item : (array.splice(index,1))
+//     });
+// } // 이런 식으로 짜게 되면, splice를 실행한 순간에 이전 index였던 item이 날린 요소의 index에 할당되어서 2번 검사를 안함.
+
+
+// let a = [1,2,3,4,5];
 
 
 
