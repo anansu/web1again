@@ -3,26 +3,240 @@
 
 
 
-function Calculator() {
-    this.methods = {
-        "+": function(a,b) {return a + b},
-        "-": function(a,b) {return a - b},
-    }
+// let users = [
+//     {id: 'john', name: "John Smith", age: 20},
+//     {id: 'ann', name: "Ann Smith", age: 24},
+//     {id: 'pete', name: "Pete Peterson", age: 31},
+// ];
+  
+// let usersById = groupById(users);
+  
+// function groupById(userArray) {
+//     let result = {};
+//     for (let user of userArray) {
+//         result[user.id] = user;
+//     }
+//     return result
+// }
 
-    this.calculate = function(str) {
-        let piece = str.split(" ");
-        if (
-            (isFinite(piece[0]) === false) ||
-            (isFinite(piece[2]) === false) ||
-            ((piece[1] in this.methods) === false)
-        ) {return alert("형식에 맞게 입력해주세요.\n형식: '숫자 연산자 숫자'")}       
-        return this.method[piece[1]](Number(piece[0]),Number(piece[2]))
-    }
+// function groupById(userArray) {
+//     return userArray.reduce((obj, value) => {
+//         obj[value.id] = value;
+//         return obj
+//     }, {})
+// }
+// 위 2개는 같고, reduce를 쓴 버전이라는 것만 다름. 근데 reduce를 써야만 하는 이유는 딱히 아직은 와닿지 않는다.
 
-    this.addMethod = function(name, func) {
-        this.methods[name] = func;
-    }
+/*
+// after the call we should have:
+  
+usersById = {
+    john: {id: 'john', name: "John Smith", age: 20},
+    ann: {id: 'ann', name: "Ann Smith", age: 24},
+    pete: {id: 'pete', name: "Pete Peterson", age: 31},
 }
+*/
+
+
+
+
+
+// function unique(arr) {
+//     let result = [];
+//     arr.forEach(function(item) {
+//         if (!result.includes(item)) {
+//             result.push(item);
+//         }
+//     })
+//     return result
+// }
+
+// function unique(array) {
+//     let result = [];  
+//     for (let item of array){
+//         if(!result.includes(item)) {
+//             result.push(item);
+//         }
+//     }
+//     return result
+// }
+
+// 위 2개는 같은 의미를 같지만, forEach 메소드를 사용할지, 일반적인 for (let a of b) 를 쓸지에 따라
+// 다르게 작성할 수 있다. 참고용으로 둘 다 써둠. let .. of 는 배열에 최적화된 반복문이다. 그냥 for 문을 써도 충분하지만
+// 웬만하면 for .. in 반복문은 진짜 쓰지 말자. 이건 객체용이다.
+
+// let strings = ["Hare", "Krishna", "Hare", "Krishna",
+//     "Krishna", "Krishna", "Hare", "Hare", ":-O"
+// ];
+  
+// alert( unique(strings) ); // Hare, Krishna, :-O
+// f(n**2)의 시간복잡도를 갖기 때문에 최적의 답은 아니다.
+
+
+
+
+
+
+// let john = { name: "John", age: 25 };
+// let pete = { name: "Pete", age: 30 };
+// let mary = { name: "Mary", age: 29 };
+
+// let arr = [ john, pete, mary ];
+
+// function getAverageAge(array) {
+//     let sumOfage = 0;
+//     for (let user of array) {
+//         sumOfage += user.age;
+//     }
+//     console.log(array.length);
+//     return sumOfage / array.length
+// }
+
+// alert( getAverageAge(arr) ); // (25 + 30 + 29) / 3 = 28
+
+
+
+
+// function shuffle(array) {
+//     array.sort(function(a,b) {
+//         return (a - a + Math.random()) - (b - b + Math.random())
+//     });
+//     return array
+// }
+
+// let arr = [1, 2, 3];
+
+// shuffle(arr);
+// // arr = [3, 2, 1]
+
+// shuffle(arr);
+// // arr = [2, 1, 3]
+
+// shuffle(arr);
+// // arr = [3, 1, 2]
+// // ...
+
+
+// let count = {
+//     '123': 0,
+//     '132': 0,
+//     '213': 0,
+//     '231': 0,
+//     '321': 0,
+//     '312': 0
+//   };
+  
+//   for (let i = 0; i < 1000000; i++) {
+//     let array = [1, 2, 3];
+//     shuffle(array);
+//     count[array.join('')]++;
+//   }
+  
+//   // 만들 수 있는 모든 순열의 생성 빈도를 세서 출력해줍니다.
+//   for (let key in count) {
+//     alert(`${key}: ${count[key]}`);
+//   }
+// 위의 검사에 의하면 이건 틀린 답인데 어차피 피셔-에이츠 셔플 알고리즘을 활용해야하기에 깊게 안 판다. 버려.
+
+
+// let john = { name: "John", age: 25 };
+// let pete = { name: "Pete", age: 30 };
+// let mary = { name: "Mary", age: 28 };
+
+// let arr = [ pete, john, mary ];
+
+// function sortByAge(array) {
+//     // array.sort((a,b) => a.age - b.age);
+//     // array.sort((a,b) => {return a.age - b.age});
+//     // array.sort(function(a,b) {return a.age - b.age});
+//     // 위 3가지는 모두 같다. 이 참에 화살표 함수 좀 익숙해지라고 써봄.
+//     return array
+// }
+
+// sortByAge(arr);
+
+// alert(arr[0].name); // John
+// alert(arr[1].name); // Mary
+// alert(arr[2].name); // Pete
+
+
+
+
+// let john = { name: "John", surname: "Smith", id: 1 };
+// let pete = { name: "Pete", surname: "Hunt", id: 2 };
+// let mary = { name: "Mary", surname: "Key", id: 3 };
+
+// let users = [ john, pete, mary ];
+
+// // let usersMapped = users.map(function(item) {
+// //     return {
+// //         "fullName": item.name + " " + item.surname,
+// //         "id": item.id,
+// //     }
+// // });
+
+
+// let usersMapped = users.map((item) => {
+//     return {"fullName": `${item.name} ${item.surname}`, "id": item.id,}
+// });
+
+// let usersMapped = users.map(item => {
+//     return {"fullName": `${item.name} ${item.surname}`, "id": item.id,}
+// });
+
+// let usersMapped = users.map(item => ({"fullName": `${item.name} ${item.surname}`, "id": item.id,})
+// );
+
+
+// /*
+// usersMapped = [
+//   { fullName: "John Smith", id: 1 },
+//   { fullName: "Pete Hunt", id: 2 },
+//   { fullName: "Mary Key", id: 3 }
+// ]
+// */
+
+// alert( usersMapped[0].id ) // 1
+// alert( usersMapped[0].fullName ) // John Smith
+
+
+
+
+
+// let john = { name: "John", age: 25 };
+// let pete = { name: "Pete", age: 30 };
+// let mary = { name: "Mary", age: 28 };
+
+// let users = [ john, pete, mary ];
+
+// users.map(item => item.name);
+
+// console.log(users);
+
+
+
+
+// function Calculator() {
+//     this.methods = {
+//         "+": function(a,b) {return a + b},
+//         "-": function(a,b) {return a - b},
+//     };
+
+//     this.calculate = function(str) {
+//         let piece = str.split(" ");
+//         if (
+//             (isFinite(piece[0]) === false) ||
+//             (isFinite(piece[2]) === false) ||
+//             ((piece[1] in this.methods) === false)
+//         ) {return alert("형식에 맞게 입력해주세요.\n형식: '숫자 연산자 숫자'")}       
+//         console.log(piece[1]);
+//         return this.methods[piece[1]](Number(piece[0]),Number(piece[2]))
+//     };
+
+//     this.addMethod = function(name, func) {
+//         this.methods[name] = func;
+//     };
+// }
 
 
 
