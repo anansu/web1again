@@ -3,6 +3,127 @@
 
 
 
+
+
+// function slice(str, start, end) {
+//     return Array.from(str).slice(start, end).join('');
+// }
+
+// let str = '𝒳😂𩷶';
+
+// alert(slice(str, 1,3));
+// alert(str.slice(1,3));
+
+
+// let range = {
+//     from: 1,
+//     to: 5,
+  
+//     [Symbol.iterator]() {
+//         this.current = this.from;
+//         return this;
+//     },
+
+//     next() {
+//         if (this.current <= this.to) {
+//             return { done: false, value: this.current++ };
+//         } else {
+//             return { done: true };
+//         }
+//     }
+// };
+
+// let arr = Array.from(range, (item,index) => item = `index ${index} is item ${item}`);
+// alert(arr);
+
+
+// let str = "𝒳😂";
+
+// let chars = Array.from(str);
+
+// alert(chars[0]);
+// alert(chars[1]);
+// alert(chars.length);
+
+
+
+// let arrayLike = {
+//     0: "Hello",
+//     1: "World",
+//     "length": 2,
+// };
+
+// let arr = Array.from(arrayLike);
+// alert(arr.pop());
+
+
+
+
+// let str = "Hello";
+
+// let iterator = str[Symbol.iterator]();
+
+// while (true) {
+//     let result = iterator.next();
+//     if (result.done) break;
+//     alert(result.value);
+// }
+
+
+// let range = {
+//     from: 1,
+//     to: 5,
+  
+//     [Symbol.iterator]() {
+//         this.current = this.from;
+//         return this;
+//     },
+
+//     next() {
+//         if (this.current <= this.to) {
+//             return { done: false, value: this.current++ };
+//         } else {
+//             return { done: true };
+//         }
+//     }
+// };
+  
+// for (let num of range) {
+//     alert(num); // 1, then 2, 3, 4, 5
+// }
+
+
+
+// let range = {
+//     "from": 1,
+//     "to": 5,
+// };
+
+// range[Symbol.iterator] = function() {
+
+//     return {
+//         "current": this.from,
+//         "last": this.to,
+
+//         next() {
+//             if (this.current <= this.last) {
+//                 return { "done": false, "value": this.current++, };
+//             } else {
+//                 return { "done": true,};
+//             }
+//         }
+//     };
+// };
+
+// for (let num of range) {
+//     alert(num);
+// }
+
+
+
+
+
+
 // let users = [
 //     {id: 'john', name: "John Smith", age: 20},
 //     {id: 'ann', name: "Ann Smith", age: 24},
