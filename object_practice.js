@@ -1,8 +1,70 @@
 "use strict"
 
 
+// 객체와 배열과 map의 가장 큰 차이는 "키"를 어떻게 설정할 수 있냐임.
+// 객체는 "키"로 문자열 or 심볼만 가능
+// 배열은 "키"가 없는게 아니라, 정수형 index만 가능함. 그런데 사실 Key 형태로 부르는 거라고 하면 애매해지는 면이 있음.
+// 배열에 키/프로퍼티 문자열 추가는 가능한데... length에 영향을 미치진 않는다.
+// map은 "키"에 아무런 제한이 없다. 키로 "객체"도 둘 수 있따!
+// iterable 객체란
+// (1) 객체이며
+// (2) for ... of 등의 문법을 이용하여 각 요소를 반복할 수 있다
+// (3) 배열은 내장 iterable 객체이기 때문에 for of가 가능한 것.
+// (4) 배열 아닌 객체가 iterable이 되려면 symbol.iterator인 메소드를 정의해야하고, 
+// 해당 메소드는 인자가 없이 iterator 객체를 반환해야 한다.
+
+// let map = new Map();
+
+// map.set('1', 'str1');
+// map.set(1,'num1');
+// map.set(true,'bool1');
+
+// alert( map.get(1)   ); // 'num1'
+// alert( map.get('1') ); // 'str1'
+
+// alert( map.size ); // 3
+
+let recipeMap2 = new Map();
+
+recipeMap2.set(0, {"cucumber": 500});
+recipeMap2.set(1, {"tomatoes": 350});
+recipeMap2.set(2, {"eggs": 150});
+recipeMap2.set(3, [0,1,2,3]);
+recipeMap2.set(4, "키는 4지만 5번째 요소");
+recipeMap2.set("5", "키는 '5'지만 6번째 요소");
+recipeMap2.set("99", "키는 '99'이지만 7번째 요소");
 
 
+let recipeMap = new Map([
+    ['cucumber', 500],
+    ['tomatoes', 350],
+    ['onion',    50]
+]);
+
+for (let vegetable of recipeMap.keys()) {
+    alert(vegetable);
+}
+// 여기서 recipeMap.keys()로 뽑힌 키를 모아놓은 반복가능한 객체에다가 뭔짓을 하는 것임. recipeMap에 뭔짓 하는게 아님
+
+
+for (let amount of recipeMap.values()) {
+    alert(amount);
+}
+// recipeMap.values()로 뽑힌 값을 모아놓은 반복가능한 객체에다가 뭔짓을 하는 것임. recipeMap에 뭔짓 하는게 아님
+
+for (let entry of recipeMap) {
+    alert(entry);
+}
+
+for (let entry of recipeMap.entries()) {
+    alert(entry);
+}
+// recipeMap과 recipeMap.entries는 동일함.
+
+recipeMap.forEach( (value, key) => {
+    alert(`${key}: ${value}`); // cucumber: 500 ...
+});
+// entry 보는거보다 정교하게, 각 key value에 접근 가능함.
 
 
 // function slice(str, start, end) {
@@ -1058,3 +1120,4 @@ usersById = {
 //     alert(prop);
 //     alert(user[prop]);
 // }
+
