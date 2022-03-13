@@ -1,70 +1,275 @@
 "use strict"
 
 
-// 객체와 배열과 map의 가장 큰 차이는 "키"를 어떻게 설정할 수 있냐임.
-// 객체는 "키"로 문자열 or 심볼만 가능
-// 배열은 "키"가 없는게 아니라, 정수형 index만 가능함. 그런데 사실 Key 형태로 부르는 거라고 하면 애매해지는 면이 있음.
-// 배열에 키/프로퍼티 문자열 추가는 가능한데... length에 영향을 미치진 않는다.
-// map은 "키"에 아무런 제한이 없다. 키로 "객체"도 둘 수 있따!
-// iterable 객체란
-// (1) 객체이며
-// (2) for ... of 등의 문법을 이용하여 각 요소를 반복할 수 있다
-// (3) 배열은 내장 iterable 객체이기 때문에 for of가 가능한 것.
-// (4) 배열 아닌 객체가 iterable이 되려면 symbol.iterator인 메소드를 정의해야하고, 
-// 해당 메소드는 인자가 없이 iterator 객체를 반환해야 한다.
+
+
+
+
+
+
+
+
+
+
+
 
 // let map = new Map();
 
-// map.set('1', 'str1');
-// map.set(1,'num1');
-// map.set(true,'bool1');
+// map.set("name", "John");
 
-// alert( map.get(1)   ); // 'num1'
-// alert( map.get('1') ); // 'str1'
+// let keys = Array.from(map.keys());
 
-// alert( map.size ); // 3
-
-let recipeMap2 = new Map();
-
-recipeMap2.set(0, {"cucumber": 500});
-recipeMap2.set(1, {"tomatoes": 350});
-recipeMap2.set(2, {"eggs": 150});
-recipeMap2.set(3, [0,1,2,3]);
-recipeMap2.set(4, "키는 4지만 5번째 요소");
-recipeMap2.set("5", "키는 '5'지만 6번째 요소");
-recipeMap2.set("99", "키는 '99'이지만 7번째 요소");
+// // Error: keys.push is not a function
+// keys.push("more");
 
 
-let recipeMap = new Map([
-    ['cucumber', 500],
-    ['tomatoes', 350],
-    ['onion',    50]
-]);
-
-for (let vegetable of recipeMap.keys()) {
-    alert(vegetable);
-}
-// 여기서 recipeMap.keys()로 뽑힌 키를 모아놓은 반복가능한 객체에다가 뭔짓을 하는 것임. recipeMap에 뭔짓 하는게 아님
 
 
-for (let amount of recipeMap.values()) {
-    alert(amount);
-}
-// recipeMap.values()로 뽑힌 값을 모아놓은 반복가능한 객체에다가 뭔짓을 하는 것임. recipeMap에 뭔짓 하는게 아님
 
-for (let entry of recipeMap) {
-    alert(entry);
-}
 
-for (let entry of recipeMap.entries()) {
-    alert(entry);
-}
-// recipeMap과 recipeMap.entries는 동일함.
 
-recipeMap.forEach( (value, key) => {
-    alert(`${key}: ${value}`); // cucumber: 500 ...
-});
-// entry 보는거보다 정교하게, 각 key value에 접근 가능함.
+// function aclean(arr) {
+
+//     let map = new Map();
+
+//     for (let word of arr) {
+//         let sorted = word.toLowerCase().split('').sort().join('');
+//         map.set(sorted, word);
+//     }
+//     return Array.from(map.values());
+// }
+// // 이거는... 일단 이 부분이 핵심임. map 객체에 같은 key로 다른 value를 할당하면
+// // 그냥 덧씌워진다는 것.
+// // 그러나 그 반복을 어떻게 잡을지도 많이 헤맸다(사실 이게 더 큰 문제)
+// // 왜냐하면 각 워드당 비교하는 작업을 해서 3개의 요소를 가진 배열을 미리 만들어버렸거든.
+// // 그러다보니 그 3개 요소를 어떻게 하면 기존 7개 요소랑 비교할지에 대해서 막혔는데, 사실 애초에 7번 반복할때
+// // 그 즉시 같이 처리해도 되는 문제였음. 미리 만들었을 때의 문제점을 더 분석했으면
+// // 이럴 일이 없었을 것. 아오 젠장.
+
+
+// let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+
+// alert( aclean(arr) );
+
+
+
+
+
+
+
+
+
+
+// function unique(arr) {
+//     let result_set = new Set();
+//     for (let element of arr) {
+//         result_set.add(element);
+//     }
+//     return result_set
+// }
+// 이건 최종 반환값으로 Set을 내놓게 되니까 아닌 것임.
+
+
+// function unique(arr) {
+//     let result_set = new Set(arr);
+//     return Array.from(result_set)
+// }
+
+// let values = new Array(
+//     "Hare", "Krishna", "Hare", "Krishna", "Krishna", "Hare", "Hare", ":-O", 1, 3, {"name": "John"}, ["배열1",2,3,"배열4"]
+// );
+
+
+// alert( unique(values) );
+
+
+
+
+
+
+
+// let setexample = new Set(["oranges", "apples", "bananas"]);
+
+// // for (let fruit of set) {
+// //     alert(fruit);
+// // }
+
+// setexample.forEach((fruit, index, set) => alert(`${fruit} is an unique element, no index, finding index, you
+// will see ${index} again, and then see the set ${set}'s size: ${set.size}`));
+
+
+
+// // set은 "중복을 허용하지 않는" 값을 모아놓은 특별한 컬렉션이다. 
+// // map은 정해진 순서가 없다. set은? 있느지 없는지 모르겠지만 배열처럼 중요하진 않은 듯
+// // 순서가 있긴 한데, 추가한 순서대로인듯함? index는 없다.
+// // 맵과 셋에 반복 작업을 할 땐, 해당 컬렉션에 요소나 값을 추가한 순서대로 반복 작업이 수행됩니다. 
+// // 따라서 이 두 컬렉션은 정렬이 되어있지 않다고 할 수 없습니다. 
+// // 그렇지만 컬렉션 내 요소나 값을 재 정렬하거나 (배열에서 인덱스를 이용해 요소를 가져오는 것처럼) 
+// // 숫자를 이용해 특정 요소나 값을 가지고 오는 것은 불가능합니다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let set = new Set();
+
+// let mary = {"name": "Mary"};
+// let john = {"name": "John"};
+// let pete = {"name": "Pete"};
+
+
+// set.add(pete);
+// set.add(mary);
+// set.add(john);
+
+// set.add(john);
+// set.add(pete);
+
+
+// alert(set.size);
+
+// for (let user of set) {
+//     alert(user.name);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+// let map = new Map();
+// map.set('banana',1);
+// map.set('orange',2);
+// map.set('meat',4);
+
+
+// let obj = Object.fromEntries(map.entries());
+
+// alert(map.get('banana'));
+// // map에서 값 불러오는 형식은 get을 사용해야 한다. 객체에서 불러오는 .요소명 or [요소명]으로 쓰지마라
+// alert(obj.orange);
+
+
+
+
+
+
+
+
+
+
+// let obj = {
+//     "name": "John",
+//     "age": 30,
+// };
+
+// let map = new Map(Object.entries(obj));
+
+// alert(map.get('name'));
+
+// let prices = Object.fromEntries([
+//     ['banana',1],
+//     ['orange',2],
+//     ['meat',4],
+// ]);
+
+
+// let prices2 = Object.fromEntries([
+//     ['bn','b2','bn3'],
+//     ['bc','bc2','bc3','bc4'],
+//     ['bd'],
+//     'be'
+// ]);
+
+// alert(prices.orange);
+
+
+
+
+// // 객체와 배열과 map의 가장 큰 차이는 "키"를 어떻게 설정할 수 있냐임.
+// // 객체는 "키"로 문자열 or 심볼만 가능
+// // 배열은 "키"가 없는게 아니라, 정수형 index만 가능함. 그런데 사실 Key 형태로 부르는 거라고 하면 애매해지는 면이 있음.
+// // 배열에 키/프로퍼티 문자열 추가는 가능한데... length에 영향을 미치진 않는다.
+// // map은 "키"에 아무런 제한이 없다. 키로 "객체"도 둘 수 있따!
+// // iterable 객체란
+// // (1) 객체이며
+// // (2) for ... of 등의 문법을 이용하여 각 요소를 반복할 수 있다
+// // (3) 배열은 내장 iterable 객체이기 때문에 for of가 가능한 것.
+// // (4) 배열 아닌 객체가 iterable이 되려면 symbol.iterator인 메소드를 정의해야하고, 
+// // 해당 메소드는 인자가 없이 iterator 객체를 반환해야 한다.
+
+// // let map = new Map();
+
+// // map.set('1', 'str1');
+// // map.set(1,'num1');
+// // map.set(true,'bool1');
+
+// // alert( map.get(1)   ); // 'num1'
+// // alert( map.get('1') ); // 'str1'
+
+// // alert( map.size ); // 3
+
+// let recipeMap2 = new Map();
+
+// recipeMap2.set(0, {"cucumber": 500});
+// recipeMap2.set(1, {"tomatoes": 350});
+// recipeMap2.set(2, {"eggs": 150});
+// recipeMap2.set(3, [0,1,2,3]);
+// recipeMap2.set(4, "키는 4지만 5번째 요소");
+// recipeMap2.set("5", "키는 '5'지만 6번째 요소");
+// recipeMap2.set("99", "키는 '99'이지만 7번째 요소");
+
+
+// let recipeMap = new Map([
+//     ['cucumber', 500],
+//     ['tomatoes', 350],
+//     ['onion',    50]
+// ]);
+
+// for (let vegetable of recipeMap.keys()) {
+//     alert(vegetable);
+// }
+// // 여기서 recipeMap.keys()로 뽑힌 키를 모아놓은 반복가능한 객체에다가 뭔짓을 하는 것임. recipeMap에 뭔짓 하는게 아님
+
+
+// for (let amount of recipeMap.values()) {
+//     alert(amount);
+// }
+// // recipeMap.values()로 뽑힌 값을 모아놓은 반복가능한 객체에다가 뭔짓을 하는 것임. recipeMap에 뭔짓 하는게 아님
+
+// for (let entry of recipeMap) {
+//     alert(entry);
+// }
+
+// for (let entry of recipeMap.entries()) {
+//     alert(entry);
+// }
+// // recipeMap과 recipeMap.entries는 동일함.
+
+// recipeMap.forEach( (value, key) => {
+//     alert(`${key}: ${value}`); // cucumber: 500 ...
+// });
+// // entry 보는거보다 정교하게, 각 key value에 접근 가능함.
+
+
+
 
 
 // function slice(str, start, end) {
