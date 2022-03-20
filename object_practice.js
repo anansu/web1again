@@ -7,6 +7,228 @@
 
 
 
+// function getWeekDay(date) {
+//     let days = ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'];
+  
+//     return days[date.getDay()];
+// }
+
+// let date = new Date(2014, 0, 3); // 2014년 1월 3일
+// alert( getWeekDay(date) ); // FR
+// 정답. 배열 해서 반환받는 값을 index로 쓰면 편할 것을...
+
+
+// function getWeekDay(date) {
+//     let day = date.getDay();
+
+//     switch(day) {
+//         case 0: "SU";
+//             return "SU";
+//         case 1: "MO";
+//             return "MO";
+//         case 2: "TU";
+//             return "TU";
+//         case 3: "WE";
+//             return "WE";
+//         case 4: "TH";
+//             return "TH";
+//         case 5: "FR";
+//             return "FR";
+//         case 6: "SA";
+//             return "SA";
+//     }
+// }
+// 내가 그냥 Switch 문으로 짜면 뭔가 성능에 좋을거 같아서 썼는데, 유지보수에는 구릴 듯.
+
+alert (getWeekDay(date));
+
+// let date = new Date(2012,1,20,3,12);
+
+// alert(date);
+
+
+
+
+
+
+
+
+
+
+// let date = new Date();
+
+// alert(date.getTime());
+
+
+// let start = Date.now(); // 1970년 1월 1일부터 현재까지의 밀리초
+
+// // 원하는 작업을 수행
+// for (let i = 0; i < 100000; i++) {
+//   let doSomething = i * i * i;
+// }
+
+// let end = Date.now(); // done
+
+// alert( `반복문을 모두 도는데 ${end - start} 밀리초가 걸렸습니다.` ); 
+
+
+
+
+
+// let start = new Date();
+
+// for (let i = 0; i < 100000; i+=1) {
+//     let doSomething = i * i * i;
+// }
+
+// let end = new Date();
+
+// alert(`반복문 모두 도는데 ${end - start} 밀리초가 걸림`);
+
+// let date = new Date();
+
+// alert(date);
+
+
+
+
+
+
+// let salaries = {
+//     "John": 100,
+//     "Pete": 300,
+//     "Mary": 250
+// };
+
+// function topSalary(salaryObject) {
+//     if (Object.entries(salaryObject).length === 0) {
+//             return null;
+//         }
+
+//     let salary = 0;
+//     let top;
+    
+//     for (let keyValuePair of Object.entries(salaryObject)) {
+//         if (salary < keyValuePair[1]){
+//             ([top = "noname", salary] = keyValuePair);
+//         }
+//     }
+//     return top;
+// }
+
+
+
+
+// let user = { name: "John", years: 30 };
+
+// // 할당 연산자 좌측에 답안을 작성하시면 되겠죠?
+// // ... = user
+
+// let {name, years: age, isAdmin = false} = user;
+
+// alert( name ); // John
+// alert( age ); // 30
+// alert( isAdmin ); // false
+
+
+
+
+
+
+
+
+// 중첩 구조분해
+// let options = {
+//     size: {
+//       width: 100,
+//       height: 200
+//     },
+//     items: ["Cake", "Donut"],
+//     extra: true
+//   };
+  
+//   // 코드를 여러 줄에 걸쳐 작성해 의도하는 바를 명확히 드러냄
+//   let {
+//     size: { // size는 여기,
+//       width,
+//       height
+//     },
+//     items: [item1, item2], // items는 여기에 할당함
+//     title = "Menu" // 분해하려는 객체에 title 프로퍼티가 없으므로 기본값을 사용함
+//   } = options;
+  
+//   alert(title);  // Menu
+//   alert(width);  // 100
+//   alert(height); // 200
+//   alert(item1);  // Cake
+//   alert(item2);  // Donut
+
+
+
+
+// let arr = ["Bora", "Lee"]
+
+// let [firstName, surname] = arr;
+
+// alert(firstName);
+// alert(surname);
+
+// // 할당 연산자 우측엔 모든 이터러블이 올 수 있다.
+// let [a,b,c] = "abc";
+// let [one, two] = new Set([1,2,3]);
+
+// let obj = {
+//     "title": "Menu",
+//     "option": "Large",
+//     "price": 1500,
+// };
+
+// let {width: w = 100, title, ...restOfObject} = obj;
+
+
+
+
+
+
+
+
+
+// let user = {
+//     "name": "John",
+//     "age": 30,
+// };
+
+// function count(obj) {
+//     let result = 0;
+//     for (let property of Object.keys(obj)) {
+//         result += 1;
+//     }
+//     // 사실 이 경우에는 length 써도 되긴함. 다만 항상 맞는 수가 아닐 수 있다고 생각하여 정확하게 세보았음.
+//     return result;
+// }
+
+
+
+
+// let salaries = {
+//     "John": 100,
+//     "Pete": 300,
+//     "Mary": 250,
+// };
+
+// function sumSalaries(salaryObject) {
+//     let result = 0;
+//     let salaryArray = Object.values(salaryObject);
+//     for (let salary of salaryArray) {
+//         result += salary;
+//     }
+//     return result;
+// }
+
+
+
+
+
 
 
 
