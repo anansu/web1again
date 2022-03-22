@@ -3,7 +3,27 @@
 
 
 
+// function getDateAgo(date, days) {    
+//     let dummyDate = new Date(date.getMilliseconds());
+//     dummyDate.setDate(date.getDate() - days);
+//     return dummyDate.getDate();
+// }
+// // 내가 헷갈린건 객체의 참조와 복사였음.
+// function getDateAgo(date, days) {
+//     let dateCopy = new Date(date); 
+//     dateCopy.setDate(date.getDate() - days);
+//     return dateCopy.getDate();
+// }
+// 바로 위가 정답이긴한데, new Date는 milliseconds만 받는건 아닌가보다. 어휴
 
+
+// function getLocalDay(date) {
+//     let europeanDays = [7,1,2,3,4,5,6];    
+//     // 월요일부터 생각해보자. 일단 date.getDay(월요일) === 1이 됨.
+//     // 토요일은? date.getDay(토요일) === 6이 됨.
+//     // 일요일은? date.getDay(일요일) === 0 이 되는데, 이거에만 + 7 해주자.
+//     return europeanDays[date.getDay()];
+// }
 
 
 
@@ -40,7 +60,7 @@
 // }
 // 내가 그냥 Switch 문으로 짜면 뭔가 성능에 좋을거 같아서 썼는데, 유지보수에는 구릴 듯.
 
-alert (getWeekDay(date));
+// alert (getWeekDay(date));
 
 // let date = new Date(2012,1,20,3,12);
 
