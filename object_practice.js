@@ -3,15 +3,18 @@
 
 
 
-function getSecondsToday() {
-    // 구해야하는거 (1) today의 now (2) today의 now에서 today의 00:00을 빼는 것.
-    // (2)는 새로운 객체로 생성하되, now의 연-월-일 까지만 주자.
-    let now = new Date();
-    let todayZero = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-    return Math.round((now.getTime() - todayZero.getTime()) / 1000);
-}
 
-alert( getSecondsToday() );
+
+
+// function getSecondsToday() {
+//     // 구해야하는거 (1) today의 now (2) today의 now에서 today의 00:00을 빼는 것.
+//     // (2)는 새로운 객체로 생성하되, now의 연-월-일 까지만 주자.
+//     let now = new Date();
+//     let todayZero = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+//     return Math.round((now.getTime() - todayZero.getTime()) / 1000);
+// }
+
+// alert( getSecondsToday() );
 
 
 // function getLastDayOfMonth (year, month) {
