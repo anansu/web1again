@@ -4,6 +4,110 @@
 
 
 
+// 2022-03-27 이 부분은 다시 보자. replacer 매우 귀찮지만 제대로 알긴해야할듯
+// let room = {
+//     number: 23
+//   };
+  
+//   let meetup = {
+//     title: "Conference",
+//     occupiedBy: [{name: "John"}, {name: "Alice"}],
+//     place: room
+//   };
+  
+//   room.occupiedBy = meetup;
+//   meetup.self = meetup;
+  
+//   alert( JSON.stringify(meetup, function replacer(key, value) {
+//     return (key != "" && value == meetup) ? undefined : value;
+//   }));
+  
+//   /*
+//   {
+//     "title":"Conference",
+//     "occupiedBy":[{"name":"John"},{"name":"Alice"}],
+//     "place":{"number":23}
+//   }
+//   */
+
+
+
+
+
+
+// let user = {
+//     name: "John Smith",
+//     age: 35
+// };
+
+// let user2 = JSON.parse(JSON.stringify(user));
+
+
+
+
+
+
+
+// let student = {
+//     "name": 'John',
+//     "age": 30,
+//     "isAdmin": false,
+//     "courses": ['html', 'css', 'js'],
+//     "wife": null,
+// };
+
+// let json = JSON.stringify(student);
+
+// alert(typeof(json));
+
+// alert(json);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function formatDate(date) {
+//     let now = new Date();
+//     let timeGap = (now.getTime() - date.getTime()) / 1000
+//     if (1 > timeGap) {
+//         // console.log(timeGap);
+//         // date에 넣은 milli초 단위 time stamp를 비교해서 1000보다 차이가 안나면 true
+//         return "right now";
+//     } else if (60 > timeGap) {
+//         // console.log(Math.round(timeGap));
+//         // date에 넣은 millli초 단위 time stamp 비교해서 1000 * 60 보다 차이가 안나면 1000나눈 값을(초단위) 
+//         // n으로 놓고, + 초전 출력
+//         return Math.round(timeGap) + " sec. ago";
+//     } else if (3600 > timeGap) {
+//         // console.log(Math.round(timeGap));
+//         return Math.round(Math.round(timeGap)/60) + " min. ago";
+//     }
+//     let d = [
+//         "0" + String(date.getDate()),
+//         "0" + String(date.getMonth()+1),
+//         String(date.getFullYear()),
+//         "0" + String(date.getHours()),
+//         "0" + String(date.getMinutes())
+//     ];
+//     return `${d[0].slice(-2)}.${d[1].slice(-2)}.${d[2].slice(-2)} ${d[3].slice(-2)}:${d[4].slice(-2)}`;
+// }
+
+
+// function getSecondsToTomorrow() {
+//     let now = new Date();
+//     let nextDayZero = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1);
+//     return Math.round((nextDayZero.getTime() - now.getTime()) / 1000);
+// }
+
 
 
 // function getSecondsToday() {
