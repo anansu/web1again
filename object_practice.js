@@ -4,24 +4,186 @@
 
 
 
+
+let singleLinkedList = {
+    "value": 1,
+    "next": {
+        "value": 2,
+        "next": {
+            "value":3,
+            "next": {
+                "value": 4,
+                "next":null
+            }
+        }
+    }
+}
+
+
+
+// function printReverseList(list) {
+//     let tempList = list;
+//     let printList = [];
+//     while (tempList) {
+//         printList.push(tempList.value);
+//         tempList = tempList.next;
+//     }
+//     console.log(printList);
+//     for (let ItemIndex = (printList.length - 1); ItemIndex >= 0; ItemIndex -= 1) {
+//         console.log(printList[ItemIndex]);
+//     }  
+// } // 반복문을 활용해서 내가 짠 것
+
+// function printReverseList(list) {
+//     if (list.next) {
+//         printReverseList(list.next);
+//     }
+//     console.log(list.value);
+// } // 재귀의 활용을 적절하게 잘 이해하는게 아주 중요할 것.
+
+
+// printReverseList(singleLinkedList);
+
+
+
+
+
+// function printList(list) {
+//     if (list.next === null) {
+//         console.log(list.value);
+//     } else {
+//         console.log(list.value);
+//         printList(list.next);
+//     }
+// } 재귀방식으로 짰음
+
+// function printList(list) {
+//     console.log(list.value);
+//     if (list.next) {
+//         printList(list.next);
+//     }
+// } // 정답에서 준건데, 마찬가지로 null이 false라는 것을 적극 활용한 케이스. 게다가 이러면 매번 
+// 새롭게 null인지를 추가로 체크할 필요가 없어 더 효율적일 것으로 예상됨.
+
+// function printList(list) {
+//     for (; list.next !== null; list = list.next) {
+//         console.log(list.value);
+//     }
+//     console.log(list.value);
+// } // for 반복문으로 짰는데 초기값 안 주는 것도 첨 해보는데 괜찮네.
+
+// function printList(list) {
+//     let tempList = list;
+//     while (tempList) {
+//         console.log(tempList.value);
+//         tempList = tempList.next;
+//     }
+// } // 정답에서 제시해준건데, list를 그대로 가져오는건 좀 위험할 수 있다. + while 조건문을 더 잘 썼는데 이게 더 깔끔.
+// null은 false로 취급된다는 형변환을 잘 이해하고 적용한 케이스.
+
+// printList(singleLinkedList);
+
+
+
+
+
+
+
+// function fib(number) {
+//     let result = 0;
+//     if (number === 1 || number === 2) {
+//         return 1;
+//     } else {
+//         for (let prev2 = 1, prev1 = 1, orderOfNumber = 2; orderOfNumber < number; prev2 = prev1, prev1 = result, orderOfNumber += 1) {
+//             result = prev1 + prev2;
+//             console.log(`prev2: ${prev2}`);
+//             console.log(`prev1: ${prev1}`);
+//             console.log(`result: ${result}`);
+//         }
+//     }
+//     return result;
+// } // 내가 막 짠 코드인데, 이렇게도 된다. for 초기 조건 주는 거에 여러개 조건 주는거 처음 해봤는데 잘 되네.
+
+// function fib(number) {
+//     let prev2 = 1;
+//     let prev1 = 1;
+//     for (let order = 3; order <= number; order +=1) {
+//         let now = prev2 + prev1;
+//         prev2 = prev1;
+//         prev1 = now;
+//     }
+//     return prev1;
+// } // 정답에서 제시한 코드. 훨씬 깔끔하긴 하네.
+
+
+
+// alert(fib(1)); // 1
+// alert(fib(2)); // 1
+// alert(fib(3)); // 2
+// alert(fib(4)); // 3
+// alert(fib(7)); // 13
+// alert(fib(77));
+
+
+// function factorial(number) {
+//     if (number === 1) {
+//         return number;
+//     } else {
+//         return number * factorial(number - 1);
+//     }
+// }
+
+
+// function factorial(number) {
+//     return (number === 1) ? number : number * factorial(number - 1);
+// }
+
+// alert( factorial(5) ); // 120
+
+
+// function sumTo(number) {
+//     return number * (1+number) / 2;
+// } // 등차수열 공식
+
+// function sumTo(number) {
+//     let result = 0;
+//     for (let i = 1; i <= number; i += 1) {
+//         result += i;
+//     }
+//     return result;
+// } // 일반적인 for 반복문
+
+
+// function sumTo(number) {
+//     if (number === 1) {
+//         return number;
+//     } else {
+//         return number + sumTo(number - 1);
+//     }
+// } // 재귀적으로 짰을 때
+
+// alert( sumTo(100) ); // 5050
+
+
+
 // 2022-03-27 이 부분은 다시 보자. replacer 매우 귀찮지만 제대로 알긴해야할듯
 // let room = {
 //     number: 23
-//   };
-  
-//   let meetup = {
+// };
+
+// let meetup = {
 //     title: "Conference",
 //     occupiedBy: [{name: "John"}, {name: "Alice"}],
 //     place: room
-//   };
-  
-//   room.occupiedBy = meetup;
-//   meetup.self = meetup;
-  
-//   alert( JSON.stringify(meetup, function replacer(key, value) {
-//     return (key != "" && value == meetup) ? undefined : value;
-//   }));
-  
+// };
+
+// room.occupiedBy = meetup;
+// meetup.self = meetup;
+
+// alert( JSON.stringify(meetup, function replacer(key, value) {
+//      return (key != "" && value == meetup) ? undefined : value;
+// }));
+
 //   /*
 //   {
 //     "title":"Conference",
@@ -31,16 +193,14 @@
 //   */
 
 
-
-
-
-
 // let user = {
 //     name: "John Smith",
 //     age: 35
 // };
 
 // let user2 = JSON.parse(JSON.stringify(user));
+
+
 
 
 
@@ -1694,4 +1854,5 @@ usersById = {
 //     alert(prop);
 //     alert(user[prop]);
 // }
+
 
